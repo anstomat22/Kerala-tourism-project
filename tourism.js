@@ -1,7 +1,7 @@
 function check()
 {
     let email=document.getElementById("email");
-    let regex=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    let regex=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/;
     if(regex.test(email.value))
     {
         return true;
@@ -22,12 +22,13 @@ function validate()
     let pwd=document.getElementById("password");
     let pwdcon=document.getElementById("password_confirmation");
     let phone=document.getElementById("phone");
-    let regexem=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-    let regexph=/^([0-9]{3})([-' ''']{1})([0-9]{3})([-' ''']{1})([0-9]{4})$/;
+    let regexem=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/;
+    let regexph1=/^([0-9]{3})([-' '\.]{1})([0-9]{3})([- ' '\.]{1})([0-9]{4})$/;
+    let regexph2=/^([0-9]{10})$/;
     let regexpass=/^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Za-z])[a-zA-Z0-9!@#$%^&*]{8,30}$/;
     if(regexem.test(email.value))
         {
-            if(regexph.test(phone.value))
+            if(regexph1.test(phone.value)||regexph2.test(phone.value))
                 {
                     if(regexpass.test(pwd.value))
                         {

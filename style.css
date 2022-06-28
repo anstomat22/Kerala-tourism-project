@@ -2,7 +2,7 @@
 *{
     margin: 0;padding: 0;box-sizing: border-box;
 }
-body{ background-size: cover;
+body{ background-size: 100%;
 }
      
 header{
@@ -16,6 +16,10 @@ nav{
     background:rgba(0,0,0,0.2);
     color: white;display: flex;justify-content: space-between;
     align-items: center;text-transform: uppercase;
+}
+
+.social{
+    color: white;
 }
 
 nav.logo h1 {width: 25%; text-align: center;}
